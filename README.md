@@ -1,2 +1,62 @@
-# Personal-Bucket-List
-Personal Bucket List include my goals and which all place i want to visit.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Bucket List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #aa1958d0;
+            text-align: center;
+            padding: 20px;
+        }
+        .bucket-list {
+            list-style: none;
+            padding: 0;
+        }
+        .bucket-list li {
+            background: whitesmoke;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 400px;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: red;
+        }
+        .checkmark {
+            cursor: pointer;
+            font-size: 20px;
+            color: green;
+        }
+        @media (max-width: 600px) {
+            .bucket-list li {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>My Bucket List</h1>
+    <ul class="bucket-list">
+        <li><span>Visit many country's</span> <span class="checkmark" onclick="toggleComplete(this)">&#10003;</span></li>
+        <li><span>Skydiving</span> <span class="checkmark" onclick="toggleComplete(this)">&#10003;</span></li>
+        <li><span>Paragliding</span> <span class="checkmark" onclick="toggleComplete(this)">&#10003;</span></li>
+    <li><span>See The Northern Lights</span> <span class="checkmark" onclick="toggleComplete(this)">&#10003;</span></li>
+    </ul>
+    <script>
+        function toggleComplete(element) {
+            element.parentElement.classList.toggle('completed');
+        }
+        </script>
+        <footer>
+        <p>&copy; 2025 Personal Bucket List </p>
+    </footer>
+</body>
+</html>
